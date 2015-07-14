@@ -8,4 +8,6 @@ import willie.module as module
 @module.rule('.*dugoo.*')
 @module.require_chanmsg
 def antidugoo(bot, trigger):
+    if trigger.nick == 'dgw':
+        return
     bot.say("Listen to dgw when he tells you not to call him that, %s!" % trigger.nick)
