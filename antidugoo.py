@@ -5,7 +5,7 @@ Custom Willie module to bother people who call me a nickname I've repeatedly tol
 import willie.module as module
 
 
-@module.rule('.*dugoo.*')
+@module.rule('.*d(oo|u)gg?oo.*')
 @module.require_chanmsg
 def antidugoo(bot, trigger):
     if trigger.nick == 'dgw':
