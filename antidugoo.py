@@ -5,7 +5,7 @@ Custom Willie module to bother people who call me a nickname I've repeatedly tol
 import willie.module as module
 from random import choice
 
-STRINGS = [
+RETORTS = [
     "Listen to dgw when he tells you not to call him that, %s!",
     "dgw keeps telling you not to call him that, %s.",
     "How many times does dgw have to tell you not to use that name, %s?",
@@ -19,4 +19,4 @@ STRINGS = [
 def antidugoo(bot, trigger):
     if trigger.nick == 'dgw':
         return
-    bot.say(choice(STRINGS) % trigger.nick)
+    bot.say(choice(RETORTS) % trigger.nick)
