@@ -10,7 +10,8 @@ RETORTS = [
     "dgw keeps telling you not to call him that, %s.",
     "How many times does dgw have to tell you not to use that name, %s?",
     "Trying to get on dgw's bad side, %s?",
-    "Really, %s?"
+    "Really, %s?",
+    "There's a time and a place for calling dgw that, %s. Actually, there isn't. Ever."
 ]
 
 
