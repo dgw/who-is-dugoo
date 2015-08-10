@@ -11,7 +11,8 @@ RETORTS = [
     "How many times does dgw have to tell you not to use that name, %s?",
     "Trying to get on dgw's bad side, %s?",
     "Really, %s?",
-    "There's a time and a place for calling dgw that, %s. Actually, there isn't. Ever."
+    "There's a time and a place for calling dgw that, %s. Actually, there isn't. Ever.",
+    "You know not to call dgw that, %s. How can you live with the guilt?"
 ]
 
 
