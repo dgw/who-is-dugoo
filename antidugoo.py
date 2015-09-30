@@ -19,6 +19,6 @@ RETORTS = [
 @module.rule('.*d(oo|u)gg?oo.*')
 @module.require_chanmsg
 def antidugoo(bot, trigger):
-    if trigger.nick == 'dgw':
+    if trigger.nick == 'dgw' or trigger.nick == bot.nick:
         return
     bot.say(choice(RETORTS) % trigger.nick)
