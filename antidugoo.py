@@ -22,3 +22,5 @@ def antidugoo(bot, trigger):
     if trigger.nick == 'dgw' or trigger.nick == bot.nick:
         return
     bot.say(choice(RETORTS) % trigger.nick)
+    if bot.privileges[trigger.sender][bot.nick] > module.HALFOP:
+        bot.write(['KICK', trigger.sender, trigger.nick], "R-E-S-P-E-C-T, find out what it means to me!")
