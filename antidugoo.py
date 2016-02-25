@@ -1,8 +1,8 @@
 """
-Custom Willie module to bother people who call me a nickname I've repeatedly told them not to use.
+Custom Sopel module to bother people who call me a nickname I've repeatedly told them not to use.
 """
 
-import willie.module as module
+import sopel.module as module
 from random import choice
 
 RETORTS = [
