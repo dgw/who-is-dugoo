@@ -24,3 +24,17 @@ def antidugoo(bot, trigger):
     bot.say(choice(RETORTS) % trigger.nick)
     if bot.privileges[trigger.sender][bot.nick] > module.HALFOP:
         bot.write(['KICK', trigger.sender, trigger.nick], "R-E-S-P-E-C-T, find out what it means to me!")
+
+
+@module.rule('.*butts.*')
+@module.require_chanmsg
+def butt_kicker(bot, trigger):
+    if trigger.nick == 'Slyphoria':
+        bot.write(['KICK', trigger.sender, trigger.nick], "WHAT WHAT IN YOUR BUTT?")
+
+
+@module.rule('.*penis.*')
+@module.require_chanmsg
+def penisword(bot, trigger):
+    if trigger.nick == 'Slyphoria':
+        bot.write(['KICK', trigger.sender, trigger.nick], "SLAIN BY THE PENISWORD!")
