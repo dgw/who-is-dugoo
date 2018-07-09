@@ -21,7 +21,7 @@ RETORTS = [
 def antidugoo(bot, trigger):
     if trigger.nick == 'dgw' or trigger.nick == bot.nick:
         return
-    bot.say(choice(RETORTS) % choice((trigger.nick, steal_consonants(trigger.nick))))
+    bot.say(choice(RETORTS) % choice((trigger.nick, steal_letters(trigger.nick))))
     if bot.privileges[trigger.sender][bot.nick] > module.HALFOP:
         bot.write(['KICK', trigger.sender, trigger.nick], "R-E-S-P-E-C-T, find out what it means to me!")
 
@@ -40,8 +40,10 @@ def penisword(bot, trigger):
         bot.write(['KICK', trigger.sender, trigger.nick], "SLAIN BY THE PENISWORD!")
 
 
-def steal_consonants(name):
+def steal_letters(name):
     consonant_indices = [idx for idx, c in enumerate(name) if c.lower() in 'bcdfghjklmnpqrstvwxyz']
-    if consonant_indices and len(consonant_indices) >= 2 and consonant_indices[0] == 0:
-        return '{0}u{1}{1}oo'.format(name[consonant_indices[0]], name[consonant_indices[1]])
+    vowel_indices = [idx for idx, c in enumerate(name) if c.lower() in 'aeiou']
+    if (  consonant_indices and len(consonant_indices) >= 2 and consonant_indices[0] == 0
+          and vowel_indices and len(vowel_indices) >= 1  ):
+        return '{0}{1}{2}{2}oo'.format(name[consonant_indices[0]], name[vowel_indices[0]], name[consonant_indices[1]])
     return name
